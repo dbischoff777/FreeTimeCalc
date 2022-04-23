@@ -9,13 +9,13 @@ def main():
     # From here, add as much as friend objects you'd like.
     # Also, for each friend object, call the add_busy_range to add unavailable time range for each friend
     f1 = Friend("Dobby")
-    f1.add_busy_range(TimeRange(start_time="04:00", end_time="06:00"))
-    f1.add_busy_range(TimeRange(start_time="09:00", end_time="10:00"))
+    f1.add_busy_range(TimeRange(start_time="04:00", end_time="23:59"))
     f2 = Friend("Bobby")
-    f2.add_busy_range(TimeRange(start_time="12:00", end_time="14:00"))
-    f2.add_busy_range(TimeRange(start_time="18:00", end_time="21:30"))
+    f2.add_busy_range(TimeRange(start_time="18:00", end_time="23:59"))
     f3 = Friend("Robby")
-    f3.add_busy_range(TimeRange(start_time="16:00", end_time="23:00"))
+    f3.add_busy_range(TimeRange(start_time="16:00", end_time="23:59"))
+    f4 = Friend("Nobby")
+    f4.add_busy_range(TimeRange(start_time="16:00", end_time="23:59"))
 
     for m in available_minutes[:]:
         for r in Friend.all_busy_minutes_range:
